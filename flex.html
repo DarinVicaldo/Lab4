@@ -18,7 +18,7 @@ Description : Flex Layouts.
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<style>	
-		/* Remove borders at the end, they have been add just for detecting positions of items*/	
+		/* Remove borders at the end, they have been add just for detecting positions of items	
 		div {
 			border: 1px dashed gray;	
 		}
@@ -33,7 +33,7 @@ Description : Flex Layouts.
 		}
 		.small {
 			border: 1px solid yellow;	
-		}		
+		}		*/
 	</style>
 
 	<style>
@@ -70,11 +70,16 @@ Description : Flex Layouts.
         .container {
 			display: flex;
 			flex-wrap: wrap;
+			padding: 15px;
+			margin: 0 auto;
 
 		 }
         .header, .footer { background-color: #f2f2f2; text-align: center; padding: 10px; width: 100%;}
 		.body { 
 			/*I need some CSS codes.*/
+			padding: 15px;
+			flex: 1;
+		
 		}
         .main { 
 			padding: 15px; 
@@ -85,36 +90,40 @@ Description : Flex Layouts.
         .news-item { padding: 10px; }
         .row {
 			display: flex;
-			justify-content: space-between;
-			align-items: center
+			flex-wrap: wrap;
+			margin: 0 -10px;
 			/*I need some CSS codes.*/
 			
 		}
         
 
         @media screen and (min-width: 769px) {
-            .menu { width: 150px; } 
+            .menu { 
+				width: 150px; 
+				flex-direction: column;
+				float: none;
+			} 
 			.flexbody{
 				display: flex;
-				flex-direction: column;
+				flex-direction: row;
 				align-items: center;
 			}    
+
+			
+			
 			.large {
 				width: 100%;
 				
 			}
 			.medium { 
 				width: 70%;
-				
-				
 				/*I need some CSS codes.*/
 			}
 			.small { 
 				width: 30%;
-				
-				
 				/*I need some CSS codes.*/
 			 }       
+			
         }
 
         @media screen and (max-width: 768px) {
@@ -127,7 +136,9 @@ Description : Flex Layouts.
 			}
             .menu ul { 
 				/*I need some CSS codes.*/
-				
+				padding: 0;
+				margin: 0;
+				flex-direction: row;
 			 }            
             /*I need some CSS codes.*/
 			.large{
@@ -143,8 +154,9 @@ Description : Flex Layouts.
 				
 			}
 			.main{
-				width: 100
+				width: 100%;
 			}
+			
 
         }
 
@@ -157,6 +169,7 @@ Description : Flex Layouts.
 			 }
         }
     </style>
+
 </head>
 <body>
     <div class="container">
@@ -212,12 +225,12 @@ Description : Flex Layouts.
 					<!-- Medium news item -->
 					<div class="medium news-item">
 						<header>
-							<h1>Your Name Takes a Historic Spacewalk Near the ISS</h1>
+							<h1>Brandon Nguyen Takes a Historic Spacewalk Near the ISS</h1>
 						</header>
 						<img src="images/medium.jpg" alt="Medium Image">
 						<article>
 							<h2>A Historic Moment in Space Exploration</h2>
-							<p>In an unprecedented feat of human courage and technological prowess, astronaut Mahdi Ansari completed a spacewalk near the International Space Station (ISS), marking a new milestone in space exploration.</p>
+							<p>In an unprecedented feat of human courage and technological prowess, astronaut Brandon Nguyen completed a spacewalk near the International Space Station (ISS), marking a new milestone in space exploration.</p>
 
 							<h3>A Breathtaking Journey</h3>
 							<p>Ansari, aboard the spacecraft Voyager X, ventured out into the void of space, capturing breathtaking views of Earth and conducting important research that could pave the way for future interstellar travel.</p>
