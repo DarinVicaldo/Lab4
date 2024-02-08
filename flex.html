@@ -1,9 +1,9 @@
 <!--
 =========================================================
-Name        : index.html
+Name        : flex.html
 Assignment  : Lab 4 Exercise C
-Author(s)   : Mahdi Ansari, William Arthur Philip Louis
-Submission  : May 21, 2030
+Author(s)   : Brandon Nguyen, Darin Vicaldo
+Submission  : February 7 2024
 Description : Flex Layouts.
 =========================================================
 -->
@@ -67,8 +67,10 @@ Description : Flex Layouts.
 		}
         body { margin: 0; padding: 0; }
         img { max-width: 100%; height: auto; }
-        .container { 
-			/*I need some CSS codes.*/
+        .container {
+			display: flex;
+			flex-wrap: wrap;
+
 		 }
         .header, .footer { background-color: #f2f2f2; text-align: center; padding: 10px; width: 100%;}
 		.body { 
@@ -77,40 +79,80 @@ Description : Flex Layouts.
         .main { 
 			padding: 15px; 
 			/*I need some CSS codes.*/
+			
 		}
         
         .news-item { padding: 10px; }
-        .row { 
+        .row {
+			display: flex;
+			justify-content: space-between;
+			align-items: center
 			/*I need some CSS codes.*/
+			
 		}
         
 
         @media screen and (min-width: 769px) {
-            .menu { width: 150px; }     
-			.large { 
-				/*I need some CSS codes.*/
+            .menu { width: 150px; } 
+			.flexbody{
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}    
+			.large {
+				width: 100%;
+				
 			}
 			.medium { 
+				width: 70%;
+				
+				
 				/*I need some CSS codes.*/
 			}
 			.small { 
+				width: 30%;
+				
+				
 				/*I need some CSS codes.*/
 			 }       
         }
 
         @media screen and (max-width: 768px) {
-			.body { 
+			.flexbody { 
+				display: flex;
+				flex-direction: column;
+				align-items: center;
 				/*I need some CSS codes.*/
+				width: 100%;
 			}
             .menu ul { 
 				/*I need some CSS codes.*/
+				
 			 }            
             /*I need some CSS codes.*/
+			.large{
+				width: 100%;
+				
+			}
+			.medium{
+				width: 60%;
+				
+			}
+			.small{
+				width: 40%;
+				
+			}
+			.main{
+				width: 100
+			}
+
         }
 
         @media screen and (max-width: 480px) {
+
             .news-item header h1 { font-size: 18px; }
-            .medium, .small { 
+            .medium, .small {
+				width: 100%; 
 				/*I need some CSS codes.*/
 			 }
         }
