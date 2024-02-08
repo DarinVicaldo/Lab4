@@ -86,7 +86,6 @@ Description : Flex Layouts.
 			/*I need some CSS codes.*/
 			
 		}
-        
         .news-item { padding: 10px; }
         .row {
 			display: flex;
@@ -96,40 +95,42 @@ Description : Flex Layouts.
 			
 		}
         
-
         @media screen and (min-width: 769px) {
             .menu { 
 				width: 150px; 
 				flex-direction: column;
-				float: none;
-			} 
+				float: left;
+				height: 100%;
+			}
+	
 			.flexbody{
 				display: flex;
 				flex-direction: row;
 				align-items: center;
-			}    
-
-			
-			
+			}  
+			.body{
+				flex: 1;
+			}
 			.large {
 				width: 100%;
-				
 			}
 			.medium { 
 				width: 70%;
+				max-width: 70%;
 				/*I need some CSS codes.*/
 			}
 			.small { 
 				width: 30%;
+				max-width: 30%;
 				/*I need some CSS codes.*/
 			 }       
-			
-        }
+		}
+
 
         @media screen and (max-width: 768px) {
 			.flexbody { 
 				display: flex;
-				flex-direction: column;
+				flex-direction: row;
 				align-items: center;
 				/*I need some CSS codes.*/
 				width: 100%;
@@ -156,12 +157,9 @@ Description : Flex Layouts.
 			.main{
 				width: 100%;
 			}
-			
-
         }
 
         @media screen and (max-width: 480px) {
-
             .news-item header h1 { font-size: 18px; }
             .medium, .small {
 				width: 100%; 
